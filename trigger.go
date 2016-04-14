@@ -65,3 +65,19 @@ func (api *API) TiggersDeleteByIds(ids []string) (err error) {
 	}
 	return
 }
+
+type TiggerExitsArgs struct {
+	Expression string `json:"expression"`
+	Host       string `json:"host"`
+	HostId     string `json:"hostid"`
+	//	Description string `json:"description"`
+}
+
+func (api *API) TiggerExits(tiggerExitsArgs TiggerExitsArgs) (bool, error) {
+	response, err := api.CallWithError("trigger.exists", tiggerExitsArgs)
+	if err != nil {
+		return false, err
+	}
+	result := response.Result.(bool)
+	return result, nil
+}

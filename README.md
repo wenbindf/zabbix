@@ -3,7 +3,7 @@ zabbix [![Build Status](https://travis-ci.org/AlekSi/zabbix.svg?branch=master)](
 
 This Go package provides access to Zabbix API. Tested on Zabbix 2.0, 2.2, 2.4.
 
-Install it: `go get github.com/AlekSi/zabbix`
+Install it: `go get github.com/wenbindf/zabbix`
 
 You *have* to run tests before using this package – Zabbix API doesn't match documentation in few details, which are changing in patch releases. Tests are not expected to be destructive, but you are advised to run them against not-production instance or at least make a backup.
 
